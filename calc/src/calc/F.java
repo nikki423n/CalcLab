@@ -114,7 +114,7 @@ public class F extends JFrame {
 	}
 	
 	private void clearCalculator() {  // helper method to clear and update calculator to default
-		calcArea.setText(calcAreaDefault)
+		calcArea.setText(calcAreaDefault);
 		mathState = STATE.INITIAL;
 		initialCalcAreaInputState = true;
 		arg1 = 0.0;
