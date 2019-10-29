@@ -22,6 +22,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.MatteBorder;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.LineBorder;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class F extends JFrame {
 	private final JLabel calcArea = new JLabel("");
@@ -132,6 +136,16 @@ public class F extends JFrame {
 		getContentPane().add(calcArea);
 		
 		JButton button_1 = new JButton("1");
+		button_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_1.setBackground(Color.LIGHT_GRAY);
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				button_1.setBackground(Color.DARK_GRAY);
+			}
+		});
 		button_1.setBorder(new MatteBorder(4, 4, 4, 4, (Color) Color.WHITE));
 		button_1.setOpaque(true);
 		button_1.setForeground(Color.WHITE);
@@ -145,6 +159,16 @@ public class F extends JFrame {
 		getContentPane().add(button_1);
 		
 		JButton button_2 = new JButton("2");
+		button_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_2.setBackground(Color.LIGHT_GRAY);
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				button_2.setBackground(Color.DARK_GRAY);
+			}
+		});
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_2.getText());
@@ -158,6 +182,16 @@ public class F extends JFrame {
 		getContentPane().add(button_2);
 		
 		JButton button_3 = new JButton("3");
+		button_3.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_3.setBackground(Color.LIGHT_GRAY);
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				button_3.setBackground(Color.DARK_GRAY);
+			}
+		});
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_3.getText());
@@ -171,6 +205,16 @@ public class F extends JFrame {
 		getContentPane().add(button_3);
 		
 		JButton button_4 = new JButton("4");
+		button_4.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_4.setBackground(Color.LIGHT_GRAY);
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				button_4.setBackground(Color.DARK_GRAY);
+			}
+		});
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_4.getText());
@@ -184,6 +228,16 @@ public class F extends JFrame {
 		getContentPane().add(button_4);
 		
 		JButton button_5 = new JButton("5");
+		button_5.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_5.setBackground(Color.LIGHT_GRAY);
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				button_5.setBackground(Color.DARK_GRAY);
+			}
+		});
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_5.getText());
@@ -197,6 +251,16 @@ public class F extends JFrame {
 		getContentPane().add(button_5);
 		
 		JButton button_6 = new JButton("6");
+		button_6.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_6.setBackground(Color.LIGHT_GRAY);
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				button_6.setBackground(Color.DARK_GRAY);
+			}
+		});
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_6.getText());
@@ -210,6 +274,16 @@ public class F extends JFrame {
 		getContentPane().add(button_6);
 		
 		JButton button_7 = new JButton("7");
+		button_7.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_7.setBackground(Color.LIGHT_GRAY);
+			}
+			
+			public void mouseReleased(MouseEvent e) {
+				button_7.setBackground(Color.DARK_GRAY);
+			}
+		});
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_7.getText());
@@ -223,6 +297,16 @@ public class F extends JFrame {
 		getContentPane().add(button_7);
 		
 		JButton button_8 = new JButton("8");
+		button_8.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_8.setBackground(Color.LIGHT_GRAY);
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				button_8.setBackground(Color.DARK_GRAY);
+			}
+		});
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_8.getText());
@@ -236,6 +320,16 @@ public class F extends JFrame {
 		getContentPane().add(button_8);
 		
 		JButton button_9 = new JButton("9");
+		button_9.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_9.setBackground(Color.LIGHT_GRAY);
+			}
+			
+			public void mouseReleased(MouseEvent e) {
+				button_9.setBackground(Color.DARK_GRAY);
+			}
+		});
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_9.getText());
@@ -249,6 +343,16 @@ public class F extends JFrame {
 		getContentPane().add(button_9);
 		
 		JButton button_0 = new JButton("0");
+		button_0.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_0.setBackground(Color.LIGHT_GRAY);
+			}
+			
+			public void mouseReleased(MouseEvent e) {
+				button_0.setBackground(Color.DARK_GRAY);
+			}
+		});
 		button_0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_0.getText());
@@ -262,6 +366,16 @@ public class F extends JFrame {
 		getContentPane().add(button_0);
 		
 		JButton button_plus = new JButton("+");
+		button_plus.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_plus.setBackground(Color.WHITE);
+			}
+			
+			public void mouseReleased(MouseEvent e) {
+				button_plus.setBackground(new Color(210, 105, 30));
+			}
+		});
 		button_plus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				saveValueOfArg1();
@@ -276,6 +390,16 @@ public class F extends JFrame {
 		getContentPane().add(button_plus);
 		
 		JButton button_minus = new JButton("-");
+		button_minus.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_minus.setBackground(Color.WHITE);
+			}
+			
+			public void mouseReleased(MouseEvent e) {
+				button_minus.setBackground(new Color(210, 105, 30));
+			}
+		});
 		button_minus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				saveValueOfArg1();
@@ -290,6 +414,16 @@ public class F extends JFrame {
 		getContentPane().add(button_minus);
 		
 		JButton button_equals = new JButton("=");
+		button_equals.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_equals.setBackground(Color.WHITE);
+			}
+			
+			public void mouseReleased(MouseEvent e) {
+				button_equals.setBackground(new Color(210, 105, 30));
+			}
+		});
 		button_equals.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				saveValueOfArg2();
@@ -304,6 +438,16 @@ public class F extends JFrame {
 		getContentPane().add(button_equals);
 		
 		JButton button_clear = new JButton("AC");
+		button_clear.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				button_clear.setBackground(Color.WHITE);
+			}
+			
+			public void mouseReleased(MouseEvent e) {
+				button_clear.setBackground(Color.LIGHT_GRAY);
+			}
+		});
 		button_clear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				clearCalculator();
@@ -315,31 +459,7 @@ public class F extends JFrame {
 		button_clear.setBackground(Color.LIGHT_GRAY);
 		button_clear.setBounds(327, 85, 75, 40);
 		getContentPane().add(button_clear);
-	}
-	
-	private static class RoundedBorder implements Border {
-
-	    private int radius;
-
-
-	    RoundedBorder(int radius) {
-	        this.radius = radius;
-	    }
-
-
-	    public Insets getBorderInsets(Component c) {
-	        return new Insets(this.radius+1, this.radius+1, this.radius+2, this.radius);
-	    }
-
-
-	    public boolean isBorderOpaque() {
-	        return true;
-	    }
-
-
-	    public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
-	        g.drawRoundRect(x, y, width-1, height-1, radius, radius);
-	    }
+		
 	}
 }
 
