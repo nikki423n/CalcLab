@@ -22,6 +22,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.MatteBorder;
+import java.awt.event.MouseMotionAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseAdapter;
 
 public class F extends JFrame {
 	private final JLabel calcArea = new JLabel("");
@@ -79,6 +82,8 @@ public class F extends JFrame {
 		initialCalcAreaInputState = true;
 	}
 	
+
+	
 	private void updateCalcArea(String string) {
 		if (initialCalcAreaInputState) {  // sets text to string on initial key typed
 			calcArea.setText(string);
@@ -87,7 +92,7 @@ public class F extends JFrame {
 			calcArea.setText(calcArea.getText() + string);
 	    }
 	}
-	
+
 	/**
 	 * Save values for Calculator.
 	 */
@@ -121,10 +126,34 @@ public class F extends JFrame {
 	 * Create the frame.
 	 */
 	public F() {
+		addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
+		getContentPane().addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		getContentPane().setBackground(Color.BLACK);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 418, 315);
 		getContentPane().setLayout(null);
+		calcArea.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		calcArea.setForeground(Color.WHITE);
 		calcArea.setFont(new Font("Lucida Grande", Font.PLAIN, 72));
 		calcArea.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -132,6 +161,14 @@ public class F extends JFrame {
 		getContentPane().add(calcArea);
 		
 		JButton button_1 = new JButton("1");
+		button_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_1.setBorder(new MatteBorder(4, 4, 4, 4, (Color) Color.WHITE));
 		button_1.setOpaque(true);
 		button_1.setForeground(Color.WHITE);
@@ -145,6 +182,14 @@ public class F extends JFrame {
 		getContentPane().add(button_1);
 		
 		JButton button_2 = new JButton("2");
+		button_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_2.getText());
@@ -158,6 +203,14 @@ public class F extends JFrame {
 		getContentPane().add(button_2);
 		
 		JButton button_3 = new JButton("3");
+		button_3.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_3.getText());
@@ -171,6 +224,14 @@ public class F extends JFrame {
 		getContentPane().add(button_3);
 		
 		JButton button_4 = new JButton("4");
+		button_4.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_4.getText());
@@ -184,6 +245,14 @@ public class F extends JFrame {
 		getContentPane().add(button_4);
 		
 		JButton button_5 = new JButton("5");
+		button_5.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_5.getText());
@@ -197,6 +266,14 @@ public class F extends JFrame {
 		getContentPane().add(button_5);
 		
 		JButton button_6 = new JButton("6");
+		button_6.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_6.getText());
@@ -210,6 +287,19 @@ public class F extends JFrame {
 		getContentPane().add(button_6);
 		
 		JButton button_7 = new JButton("7");
+		button_7.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
+		button_7.addMouseMotionListener(new MouseMotionAdapter() {
+			@Override
+			public void mouseMoved(MouseEvent e) {
+			}
+		});
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_7.getText());
@@ -223,6 +313,14 @@ public class F extends JFrame {
 		getContentPane().add(button_7);
 		
 		JButton button_8 = new JButton("8");
+		button_8.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_8.getText());
@@ -236,6 +334,14 @@ public class F extends JFrame {
 		getContentPane().add(button_8);
 		
 		JButton button_9 = new JButton("9");
+		button_9.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_9.getText());
@@ -249,6 +355,14 @@ public class F extends JFrame {
 		getContentPane().add(button_9);
 		
 		JButton button_0 = new JButton("0");
+		button_0.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				updateCalcArea(button_0.getText());
@@ -262,6 +376,14 @@ public class F extends JFrame {
 		getContentPane().add(button_0);
 		
 		JButton button_plus = new JButton("+");
+		button_plus.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_plus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				saveValueOfArg1();
@@ -272,10 +394,18 @@ public class F extends JFrame {
 		button_plus.setForeground(Color.WHITE);
 		button_plus.setBorder(new MatteBorder(4, 4, 4, 4, (Color) Color.WHITE));
 		button_plus.setBackground(new Color(210, 105, 30));
-		button_plus.setBounds(327, 138, 75, 40);
+		button_plus.setBounds(327, 140, 75, 20);
 		getContentPane().add(button_plus);
 		
 		JButton button_minus = new JButton("-");
+		button_minus.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_minus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				saveValueOfArg1();
@@ -286,10 +416,62 @@ public class F extends JFrame {
 		button_minus.setForeground(Color.WHITE);
 		button_minus.setBorder(new MatteBorder(4, 4, 4, 4, (Color) Color.WHITE));
 		button_minus.setBackground(new Color(210, 105, 30));
-		button_minus.setBounds(327, 190, 75, 40);
+		button_minus.setBounds(327, 165, 75, 20);
 		getContentPane().add(button_minus);
 		
+		JButton button_divide  = new JButton("/");
+		button_divide.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
+		button_divide.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				saveValueOfArg1();
+				saveValueOfMathOp(OPERATOR.DIVIDE);
+			}
+		});
+		button_divide.setOpaque(true);
+		button_divide.setForeground(Color.WHITE);
+		button_divide.setBorder(new MatteBorder(4, 4, 4, 4, (Color) Color.WHITE));
+		button_divide.setBackground(new Color(210, 105, 30));
+		button_divide.setBounds(327, 190, 75, 20);
+		getContentPane().add(button_divide);
+		
+		JButton button_multiply  = new JButton("x");
+		button_multiply.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
+		button_multiply.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				saveValueOfArg1();
+				saveValueOfMathOp(OPERATOR.MULTIPLY);
+			}
+		});
+		button_multiply.setOpaque(true);
+		button_multiply.setForeground(Color.WHITE);
+		button_multiply.setBorder(new MatteBorder(4, 4, 4, 4, (Color) Color.WHITE));
+		button_multiply.setBackground(new Color(210, 105, 30));
+		button_multiply.setBounds(327, 215, 75, 20);
+		getContentPane().add(button_multiply);
+		
 		JButton button_equals = new JButton("=");
+		button_equals.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_equals.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				saveValueOfArg2();
@@ -304,6 +486,14 @@ public class F extends JFrame {
 		getContentPane().add(button_equals);
 		
 		JButton button_clear = new JButton("AC");
+		button_clear.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
 		button_clear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				clearCalculator();
